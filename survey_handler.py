@@ -6,6 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import random
 import time
 from abstract_survey_handler import AbstractSurveyHandler
+from dotenv import load_dotenv
 import spacy
 import random
 import time
@@ -16,6 +17,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import openai
+import os
+spacy.cli.download("en_core_web_sm")
 
 # Load spaCy model for NER
 nlp = spacy.load("en_core_web_sm")
@@ -23,8 +26,9 @@ nlp = spacy.load("en_core_web_sm")
 # Transformer model for semantic similarity
 semantic_search = pipeline('zero-shot-classification', model='facebook/bart-large-mnli')
 
+load_dotenv(dotenv_path='keys.env') 
 # OpenAI GPT for question-answering
-openai.api_key = "sk-proj-MsWD0uQmLB6PEsfbJskTT3BlbkFJGAAkjFZUT9htpYJQRyDD"
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
 class SurveyHandler(AbstractSurveyHandler):
     def __init__(self, driver, contact):
@@ -43,9 +47,7 @@ class SurveyHandler(AbstractSurveyHandler):
             'profession': 'Profession',
             'job': 'Profession',
             'occupation': 'Profession',
-            'feedback': 'Feedback',
-            'comments': 'Feedback',
-            'suggestion': 'Feedback'
+            'feedback': 'Feedback'
         }
 
     def extract_entities(self, text):
