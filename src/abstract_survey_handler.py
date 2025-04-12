@@ -24,6 +24,13 @@ class AbstractSurveyHandler(ABC):
         pass
 
     @abstractmethod
+    def get_form_context(self):
+        """
+        Extract form title and description for context.
+        """
+        pass
+
+    @abstractmethod
     def get_ai_answer(self, question_text):
         """
         Use OpenAI GPT to answer questions that don't match any CSV fields.

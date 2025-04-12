@@ -51,7 +51,7 @@ class SurveyAutoFiller(AbstractSurveyAutoFiller):
 
                 handler = SurveyHandler(driver, contact)
                 if handler.handle_multi_page_form():
-                    used_emails.add(contact['Email'])
+                    used_emails.add(contact['Email']) 
                     successful_submissions += 1
                 else:
                     print("Failed submission")

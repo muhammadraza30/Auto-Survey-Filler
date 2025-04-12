@@ -1,1 +1,0 @@
-pip install selenium python-dotenv openai spacy transformers torch hf_xet
