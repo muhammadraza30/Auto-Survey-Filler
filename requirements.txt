@@ -1,2 +1,2 @@
-pip install -U selenium python-dotenv openai spacy transformers torch hf_xet en_core_web_sm generate_ai webdriver
-
+pip install -U selenium python-dotenv openai spacy transformers torch hf_xet generate_ai webdriver
+python -m spacy download en_core_web_sm
