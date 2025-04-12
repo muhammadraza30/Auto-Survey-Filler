@@ -25,6 +25,7 @@ This project automatically fills out **Google Forms** using AI based on contact 
 ```bash
 # Create virtual environment
 python -m venv venv
+'''
 
 # Activate (Windows)
 ```bash
