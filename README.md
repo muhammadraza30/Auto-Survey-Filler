@@ -21,9 +21,8 @@ This project automatically fills out **Google Forms** using AI based on contact 
 ## 🛠 Setup Instructions
 
 ### 1. Create Virtual Environment (recommended)
-
-```bash
 # Create virtual environment
+```bash
 python -m venv venv
 ```
 
@@ -65,4 +64,4 @@ Bob Smith,bob@example.com,Los Angeles,30,Male,Master's,Data Scientist
 ```bash
 py .\src\main.py
 ```
-<h3 align="center">to be continue...</h3>
+<h3 align="center">to be continued...</h3>
