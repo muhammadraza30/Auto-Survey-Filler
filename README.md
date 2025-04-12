@@ -27,9 +27,11 @@ This project automatically fills out **Google Forms** using AI based on contact 
 python -m venv venv
 
 # Activate (Windows)
+```bash
 venv\Scripts\activate
 
 # Activate (Mac/Linux)
+```bash
 source venv/bin/activate
 
 ### 2. Install Requirements
